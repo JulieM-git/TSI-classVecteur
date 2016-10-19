@@ -61,7 +61,7 @@ float * vector::supp(int indice)
     }
 }
 
-bool vector::estegal(vector vecteur2)
+bool vector::estEgal(vector vecteur2)
 {
     bool E = 1;
     if(this->sizer == vecteur2.sizer){

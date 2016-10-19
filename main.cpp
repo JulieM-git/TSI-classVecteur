@@ -52,14 +52,14 @@ int main()
     {
         cout << vecteur.access(i) << " ";
     }
-/*
+
     vector v1(6); vector v2(6);
     for (int i=0; i<6; i++){
         v1.change(i, i);
         v2.change(i, i+1);
     }
-    cout << "Les deux vecteurs sont égaux: " << v1.estegal(v2) << endl;
-*/
+    cout << "Les deux vecteurs sont égaux ?" << v1.estEgal(v2) << endl;
+
 
     return 0;
 }
