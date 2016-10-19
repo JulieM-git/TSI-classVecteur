@@ -61,3 +61,18 @@ float * vector::supp(int indice)
     }
 }
 
+bool vector::estegal(vector vecteur2)
+{
+    bool E = 1;
+    if(this->sizer == vecteur2.sizer){
+        for (int i = 0; i < this->sizer; i++){
+            if (this->access(i) != vecteur2.access(i)){
+                E = 0;
+            }
+        }
+    }else{
+        E = 0;
+    }
+    return E;
+}
+

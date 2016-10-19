@@ -15,7 +15,7 @@ class vector
         void change(int indice, float newValeur);
         float * somme(vector vecteur2);
         float * supp(int indice);
-
+        bool estegal(vector vecteur2);
     protected:
 
     private:
