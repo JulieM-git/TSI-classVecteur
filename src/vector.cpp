@@ -76,3 +76,12 @@ bool vector::estEgal(vector vecteur2)
     return E;
 }
 
+float vector::sommeElem()
+{
+    float sum = 0;
+    for (int i = 0; i < this->sizer; i++)
+    {
+            sum += this->access(i);
+    }
+    return sum;
+}

@@ -6,7 +6,8 @@ using namespace std;
 
 int main()
 {
-    int taille; int indice; float valeur; std::string reponse; int suppi;
+    int taille; int indice; float valeur;  int suppi;
+    std::string reponse1; std::string reponse2;
 
     cout << "Bienvenue dans la manipulation de vecteurs" << endl;
 
@@ -23,8 +24,8 @@ int main()
     };
 
     cout << "Souhaitez-vous changer une valeur ? [o/n] ";
-    cin >> reponse;
-    if(reponse == "o")
+    cin >> reponse1;
+    if(reponse1 == "o")
     {
         cout << "Entrez l'indice : ";
         cin >> indice;
@@ -44,13 +45,19 @@ int main()
 
     cout << vecteur.somme(vecteur2) << endl;
 
-    cout << "Indice de suppression ";
-    cin >> suppi;
-    cout << vecteur.supp(suppi) << endl;
-
-    for(int i=0; i<vecteur.sizer; i++)
+    cout << "Souhaitez-vous supprimer une valeur ? [o/n] ";
+    cin >> reponse2;
+    if(reponse2 == "o")
     {
-        cout << vecteur.access(i) << " ";
+        cout << "Indice de suppression : ";
+        cin >> suppi;
+        cout << vecteur.supp(suppi) << endl;
+
+        for(int i=0; i<vecteur.sizer; i++)
+        {
+            cout << vecteur.access(i) << " ";
+        }
+        cout << " " << endl;
     }
 
     vector v1(6); vector v2(6);
@@ -58,7 +65,9 @@ int main()
         v1.change(i, i);
         v2.change(i, i+1);
     }
-    cout << "Les deux vecteurs sont égaux ?" << v1.estEgal(v2) << endl;
+    cout << "Les deux vecteurs sont égaux ? " << v1.estEgal(v2) << endl;
+
+    cout << "La somme des éléments du vecteur est : " << v1.sommeElem() << endl;
 
 
     return 0;

@@ -16,6 +16,7 @@ class vector
         float * somme(vector vecteur2);
         float * supp(int indice);
         bool estEgal(vector vecteur2);
+        float sommeElem();
     protected:
 
     private:
